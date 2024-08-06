@@ -22,7 +22,7 @@ export function OrderDetailsList() {
           orderHeader={Object.keys(selectedOrder)[i]}
           orderValue={Object.values(selectedOrder)[i]}
           className={styles[`card_${i}`]}
-          index={i}
+          orderIndex={i}
           key={crypto.randomUUID()}
         />
       );

@@ -21,7 +21,6 @@ export function OrderProvider({ children }) {
       return JSON.parse(storedOrderList);
     }
   );
-
   // update local storage
   useEffect(() => {
     if (sheetData.length !== 0) {
@@ -29,7 +28,7 @@ export function OrderProvider({ children }) {
     }
   }, [sheetData]);
 
-  // search filter
+  // FILTER ORDERS
   const filteredData = useMemo(() => {
     return sheetData.filter((data) => {
       // life filter? not sure if works correctly
@@ -43,6 +42,24 @@ export function OrderProvider({ children }) {
     });
   }, [sheetData, query]);
 
+  // update order value
+  function updateSheetData(value, id, index) {
+    setSheetData((currentData) => {
+      return currentData.map((data) => {
+        // select clicked key value
+        let selectedKey = Object.keys(currentData[id])[index];
+        // if numbers save as number
+        if (data.ID === currentData[id].ID && /^\d+$/.test(value)) {
+          return { ...data, [selectedKey]: Number(value) };
+          // else save as string
+        } else if (data.ID === currentData[id].ID) {
+          return { ...data, [selectedKey]: value };
+        }
+        return data;
+      });
+    });
+  }
+
   return (
     <>
       <OrderContext.Provider
@@ -52,6 +69,7 @@ export function OrderProvider({ children }) {
           query,
           setQuery,
           filteredData,
+          updateSheetData,
         }}
       >
         {children}

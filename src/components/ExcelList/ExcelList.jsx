@@ -7,27 +7,6 @@ export function ExcelList() {
   const { filteredData, sheetData } = useOrderData();
   return (
     <>
-      {/* {filteredData.length > 0 && (
-        <div className={styles.grid}>
-          {filteredData.map((row, index) => {
-            return (
-              <div key={crypto.randomUUID()} className={styles.card}>
-                <ExcelListCard title={orderHeaders[6]} row={row[1]} />
-                <ExcelListCard title={orderHeaders[1]} row={row[1]} />
-                <ExcelListCard title={orderHeaders[5]} row={row[5]} />
-                <Button
-                  AsComponent={Link}
-                  theme="purple"
-                  to={`/orderdetails/${index}`}
-                >
-                  Details
-                </Button>
-              </div>
-            );
-          })}
-        </div>
-      )} */}
-
       {filteredData.length > 0 && (
         <div className={styles.grid}>
           {filteredData.slice(0, 3).map((row) => {

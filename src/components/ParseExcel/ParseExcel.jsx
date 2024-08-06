@@ -11,6 +11,7 @@ export function ParseExcel() {
   return (
     <div className={styles.uploader}>
       {/* if file uploaded, hide upload button */}
+      {/* upload file */}
       <span className={sheetData.length !== 0 ? "hidden" : ""}>
         <label htmlFor="file-upload" className={styles["costum-file-upload"]}>
           Upload File
@@ -23,9 +24,12 @@ export function ParseExcel() {
         />
       </span>
 
-      <Button theme="edit" onClick={() => exportToExcel(sheetData, "henk")}>
+      {/* export excel file */}
+      <Button theme="upload" onClick={() => exportToExcel(sheetData, "Boxcooler References")}>
         export
       </Button>
+
+      {/* clear uploaded file */}
       <Button
         theme="red"
         className={sheetData.length === 0 ? styles.hidden : ""}

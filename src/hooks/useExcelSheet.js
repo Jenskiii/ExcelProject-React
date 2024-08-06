@@ -1,6 +1,6 @@
 import * as XLSX from "xlsx";
 import { LOCAL_STORAGE_KEY } from "../context/OrderProvider";
-import { saveAs } from 'file-saver';
+import { saveAs } from "file-saver";
 
 export function useExcelSheet(saveDataToVariable) {
   // upload excel file
@@ -38,6 +38,7 @@ export function useExcelSheet(saveDataToVariable) {
       bookType: "xlsx",
       type: "array",
     });
+
     const blob = new Blob([excelBuffer], { type: "application/octet-stream" });
     saveAs(blob, `${fileName}.xlsx`);
   };

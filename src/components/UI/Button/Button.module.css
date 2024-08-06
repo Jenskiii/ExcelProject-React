@@ -47,3 +47,12 @@
 .btn.cancel:is(:hover, :active) {
   color: rgb(255, 0, 0)
 }
+
+
+.btn.upload{
+  background-color: rgb(1, 120, 21);
+}
+
+.btn.upload:is(:hover, :active){
+  background-color: rgb(2, 201, 35);
+}
