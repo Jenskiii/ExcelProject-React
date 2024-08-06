@@ -1,0 +1,49 @@
+.btn {
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  transition: 250ms ease-in-out;
+}
+/* purple */
+.btn.purple {
+  background-color: purple;
+}
+/* red */
+.btn.red {
+  background-color: hsl(0, 60%, 49%);
+}
+/* hover */
+.btn.red:is(:hover, :active),
+.btn.purple:is(:hover, :active) {
+  opacity: 0.75;
+}
+
+
+/* edit */
+.btn.edit {
+  color: rgb(0, 174, 255);
+  background-color: transparent;
+  width: auto;
+}
+.btn.edit:is(:hover, :active) {
+  color: rgb(0, 255, 42);
+}
+
+/* cancel */
+.btn.cancel {
+  color: rgba(255, 0, 0, .8);
+  background-color: transparent;
+  width: auto;
+}
+.btn.cancel:is(:hover, :active) {
+  color: rgb(255, 0, 0)
+}

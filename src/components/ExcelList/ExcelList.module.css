@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  gap: var(--grid-gap, 1rem);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(calc((100% / 3) - 2rem), 100%), 1fr)
+  );
+}
+
+.card {
+  display: grid;
+  gap: 1rem;
+  background-color: #1d1b24;
+  padding: 1rem;
+  border: solid #cccccc 2px;
+  border-radius: 8px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.row > h3 {
+  font-weight: 800;
+  
+}

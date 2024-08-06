@@ -1,0 +1,66 @@
+.card {
+  display: grid;
+  gap: 0.5rem;
+  text-align: center;
+  background-color: transparent;
+}
+
+.card > h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: solid #cccccc 1px;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-width: 15rem;
+}
+
+.item p {
+  margin-inline: auto;
+}
+
+.item button {
+  position: absolute;
+  right: 1rem;
+}
+
+.item input{
+  color: white;
+  background-color: transparent;
+  outline: solid 2px #cccccc;
+  border: 0; 
+  border-radius: 8px;
+  padding: .25rem;
+  text-align: center;
+  width: 100%;
+}
+
+.item.empty {
+  border: solid rgba(255, 0, 0, 0.76) 1px;
+  color: rgba(255, 0, 0, 0.76);
+}
+
+
+/* EDIT */
+.edit{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.item.active{
+ flex-direction: column;
+}
+.item.active button{
+  position: relative;
+}
+.item.active{
+  border-width: 3px;
+}
+
+

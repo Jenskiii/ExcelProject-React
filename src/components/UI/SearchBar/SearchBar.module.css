@@ -1,0 +1,28 @@
+.searchbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: solid 2px #cccccc;
+  border-radius: .5rem;
+  max-width: 25rem;
+  padding-right: 1rem;
+  margin-block: 2.5rem;
+  background-color: #1f1b24;
+}
+
+.searchbar > input {
+  cursor: pointer;
+  color: white;
+  caret-color: #cccccc;
+  padding: 0.75rem;
+  border-radius: 3rem;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  cursor: pointer;
+  filter: invert(200%) sepia(50%) saturate(500%) hue-rotate(-400deg);
+}

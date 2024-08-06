@@ -1,0 +1,75 @@
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "IMO NAME NAME NB"
+    "ORDER YEAR . CLAS"
+    ". . . VESSEL"
+    "YARD YARD COUNTRY ."
+    "DRAW1 DRAW6 . ."
+    "DRAW2 DRAW7 . ."
+    "DRAW3 DRAW8 . ."
+    "DRAW4 DRAW9 . ."
+    "DRAW5 DRAW10. .";
+}
+.card_0 {
+  grid-area: YEAR;
+}
+.card_1 {
+  grid-area: ORDER;
+}
+.card_2 {
+  grid-area: YARD;
+}
+.card_3 {
+  grid-area: COUNTRY;
+}
+.card_4 {
+  grid-area: NB;
+}
+.card_5 {
+  grid-area: IMO;
+}
+.card_6 {
+  grid-area: NAME;
+}
+.card_9 {
+  grid-area: VESSEL;
+  margin-top: 3rem;
+}
+.card_10 {
+  grid-area: CLAS;
+}
+
+/* drawings */
+.card_11 {
+  grid-area: DRAW1;
+}
+.card_12 {
+  grid-area: DRAW2;
+}
+.card_13 {
+  grid-area: DRAW3;
+}
+.card_14 {
+  grid-area: DRAW4;
+}
+.card_15 {
+  grid-area: DRAW5;
+}
+.card_16 {
+  grid-area: DRAW6;
+}
+.card_17 {
+  grid-area: DRAW7;
+}
+.card_18 {
+  grid-area: DRAW8;
+}
+.card_19 {
+  grid-area: DRAW9;
+}
+.card_20 {
+  grid-area: DRAW10;
+}
