@@ -12,14 +12,14 @@ export function ExcelList() {
           {filteredData.slice(0, 3).map((row) => {
             return (
               <div key={crypto.randomUUID()} className={styles.card}>
-                <ExcelListItem title="Order no" row={row["Order no"]} />
-                <ExcelListItem title="Vessel name" row={row["Vessel name"]} />
-                <ExcelListItem title="IMO no" row={row["IMO number"]} />
+                <ExcelListItem title="Order no" row={row["Order_no"]} />
+                <ExcelListItem title="Vessel name" row={row["Vessel_name"]} />
+                <ExcelListItem title="IMO no" row={row["IMO_number"]} />
                 <Button
                   AsComponent={Link}
                   theme="details"
                   to={`/orderdetails/${sheetData.findIndex(
-                    (item) => item["Order no"] === row["Order no"]
+                    (item) => item["Order_no"] === row["Order_no"]
                   )}`}
                 >
                   Details

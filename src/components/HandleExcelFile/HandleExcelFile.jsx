@@ -3,6 +3,7 @@ import { useExcelSheet } from "../../hooks/useExcelSheet";
 import { Button } from "../UI/Button/Button";
 import styles from "./HandleExcelFile.module.css";
 import { DeleteIcon, DownloadIcon, UploadIcon } from "../UI/SVG/Svg";
+import { Link } from "react-router-dom";
 
 export function HandleExcelFile() {
   const { sheetData, setSheetData } = useOrderData();
@@ -35,6 +36,9 @@ export function HandleExcelFile() {
 
       {/* clear uploaded file */}
       <Button
+        AsComponent={Link}
+        to="./home"
+        reloadDocument
         theme="clear"
         className={sheetData.length === 0 ? styles.hidden : ""}
         onClick={() => clearFileUpload()}>

@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate, useRouteError } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
 import { OrderDetails } from "./pages/OrderDetails/OrderDetails";
 import { RootLayout } from "./layouts/RootLayout";
+import AddOrder from "./pages/AddOrder/AddOrder";
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ export const router = createBrowserRouter([
           // home page
           { index: true, element: <Navigate to="/home" /> },
           { path: "/home", element: <Home /> },
+          { path: "/add-order", element: <AddOrder /> },
           { path: "/orderdetails/:orderId", element: <OrderDetails /> },
 
           { path: "*", element: <Home /> },

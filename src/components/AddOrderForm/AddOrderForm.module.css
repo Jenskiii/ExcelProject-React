@@ -1,0 +1,56 @@
+.form {
+  display: grid;
+  background-color: hsla(227, 13%, 52%, 0.09);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+.form-grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 5rem;
+}
+
+.button {
+  justify-self: center;
+  margin-top: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column-reverse;
+  border-bottom: 1px solid #12121279;
+  width: 100%;
+  transition: 250ms ease-in-out;
+}
+.form-group:nth-child(9) {
+  grid-column: 1/3;
+  margin-block: 1rem;
+  width: 50%;
+  text-align: center;
+}
+.form-group input,
+.form-group p {
+  padding-block: .75rem;
+  color: #121212bb;
+  transition: 250ms ease-in-out;
+}
+
+.form-group label {
+  font-weight: 700;
+}
+
+.form-group input {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  &:is(:active, :hover, :focus) {
+    border-bottom: 1px solid rgb(2, 201, 35);
+
+    + label {
+      color: rgb(2, 201, 35);
+    }
+  }
+}

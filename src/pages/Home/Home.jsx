@@ -3,8 +3,11 @@ import { ExcelList } from "../../components/ExcelList/ExcelList";
 import styles from "./Home.module.css";
 import { Button } from "../../components/UI/Button/Button";
 import { AddIcon } from "../../components/UI/SVG/Svg";
+import { Link } from "react-router-dom";
+import useOrderData from "../../hooks/useOrderData";
 
 export function Home() {
+  const { sheetData } = useOrderData();
   return (
     <>
       <h1>Orders</h1>
@@ -12,9 +15,12 @@ export function Home() {
         {/* search bar */}
         <SearchBar />
         {/* add button */}
-        <Button theme="add">
-          <AddIcon /> Add Order
-        </Button>
+
+        {sheetData.length > 0 && (
+          <Button theme="add" AsComponent={Link} to="/add-order">
+            <AddIcon /> Add New Order
+          </Button>
+        )}
       </div>
 
       {/* Print excel rows */}

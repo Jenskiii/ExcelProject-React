@@ -31,18 +31,15 @@ export function OrderProvider({ children }) {
   // FILTER ORDERS
   const filteredData = useMemo(() => {
     return sheetData.filter((data) => {
-      // life filter? not sure if works correctly
-      // if (query) {
-      //   return Object.values(data).includes(Number(query))
-      // }
-      return (
-        data["Order no"] === Number(query) ||
-        data["IMO number"] === Number(query)
-      );
+      if (/^\d+$/.test(query)) {
+        return Object.values(data).includes(Number(query));
+      } else {
+        return Object.values(data).includes(query);
+      }
     });
   }, [sheetData, query]);
 
-  // update order value
+  // UPDARW order value
   function updateSheetData(value, id, index) {
     setSheetData((currentData) => {
       return currentData.map((data) => {
@@ -53,10 +50,17 @@ export function OrderProvider({ children }) {
           return { ...data, [selectedKey]: Number(value) };
           // else save as string
         } else if (data.ID === currentData[id].ID) {
-          return { ...data, [selectedKey]: value };
+          return { ...data, [selectedKey]: value.toUpperCase() };
         }
         return data;
       });
+    });
+  }
+
+  // ADD order
+  function addSheetData(newOrder) {
+    setSheetData((currentData) => {
+      return [...currentData, newOrder];
     });
   }
 
@@ -70,8 +74,8 @@ export function OrderProvider({ children }) {
           setQuery,
           filteredData,
           updateSheetData,
-        }}
-      >
+          addSheetData,
+        }}>
         {children}
       </OrderContext.Provider>
     </>

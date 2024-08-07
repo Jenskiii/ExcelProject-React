@@ -26,8 +26,6 @@ export function useExcelSheet(saveDataToVariable) {
   function clearFileUpload() {
     // clear uploaded file
     localStorage.removeItem(LOCAL_STORAGE_KEY);
-    // reload the page
-    window.location.reload();
   }
 
   const exportToExcel = (data, fileName) => {

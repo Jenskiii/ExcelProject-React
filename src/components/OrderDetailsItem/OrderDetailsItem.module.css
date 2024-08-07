@@ -58,6 +58,7 @@
   position: relative;
 }
 .card.active {
+  color: #121212;
   border-width: 2px;
   border-color: rgb(2, 201, 35);
 }

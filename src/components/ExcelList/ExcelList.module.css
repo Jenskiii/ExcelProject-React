@@ -1,10 +1,7 @@
 .grid {
   display: grid;
   gap: var(--grid-gap, 1rem);
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(min(calc((100% / 3) - 2rem), 100%), 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, 1fr);
   margin-top: 2.5rem;
 }
 
