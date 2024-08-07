@@ -1,0 +1,33 @@
+.costum-file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  height: 3rem;
+  width: 10rem;
+  border: none;
+  color: rgb(1, 120, 21);
+  font-family: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.0625rem;
+  background-color: transparent;
+  transition: 250ms ease-in-out;
+}
+.costum-file-upload svg {
+  max-width: 1rem;
+  width: 100%;
+}
+.costum-file-upload:is(:hover, :active) {
+  color: rgb(2, 201, 35);
+  border-bottom: solid 1px rgb(2, 201, 35);
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}

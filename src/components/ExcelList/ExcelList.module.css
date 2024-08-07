@@ -5,24 +5,24 @@
     auto-fit,
     minmax(min(calc((100% / 3) - 2rem), 100%), 1fr)
   );
+  margin-top: 2.5rem;
 }
 
 .card {
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   gap: 1rem;
-  background-color: #1d1b24;
   padding: 1rem;
-  border: solid #cccccc 2px;
-  border-radius: 8px;
+  border-bottom: solid #12121228 2px;
 }
 
 .row {
-  display: flex;
-  align-items: center;
+  display: grid;
+  align-items: top;
   gap: 0.5rem;
+  text-align: center;
 }
 
 .row > h3 {
   font-weight: 800;
-  
 }

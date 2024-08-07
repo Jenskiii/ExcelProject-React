@@ -12,12 +12,12 @@ export function ExcelList() {
           {filteredData.slice(0, 3).map((row) => {
             return (
               <div key={crypto.randomUUID()} className={styles.card}>
-                <ExcelListCard title="Order no" row={row["Order no"]} />
-                <ExcelListCard title="Vessel name" row={row["Vessel name"]} />
-                <ExcelListCard title="IMO no" row={row["IMO number"]} />
+                <ExcelListItem title="Order no" row={row["Order no"]} />
+                <ExcelListItem title="Vessel name" row={row["Vessel name"]} />
+                <ExcelListItem title="IMO no" row={row["IMO number"]} />
                 <Button
                   AsComponent={Link}
-                  theme="purple"
+                  theme="details"
                   to={`/orderdetails/${sheetData.findIndex(
                     (item) => item["Order no"] === row["Order no"]
                   )}`}
@@ -33,10 +33,10 @@ export function ExcelList() {
   );
 }
 
-function ExcelListCard({ title, row }) {
+function ExcelListItem({ title, row }) {
   return (
     <div className={styles.row}>
-      <h3>{title}: </h3>
+      <h3>{title}</h3>
       <p>{row}</p>
     </div>
   );

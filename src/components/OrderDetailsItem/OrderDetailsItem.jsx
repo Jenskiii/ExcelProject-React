@@ -16,7 +16,10 @@ export function OrderDetailsItem({
   const { updateSheetData } = useOrderData();
 
   return (
-    <div className={`${className} | ${styles.card}`}>
+    <div
+      className={`${className} ${styles.card} | ${
+        orderValue === "" && styles.empty
+      } ${isEditing === true && styles.active}  `}>
       <h3>{orderHeader}</h3>
 
       {/* card when editing */}
@@ -49,7 +52,7 @@ export function OrderDetailsItem({
         </span>
       ) : (
         // card when not editing
-        <span className={`${styles.item} ${orderValue === "" && styles.empty}`}>
+        <span className={`${styles.item} `}>
           <p>{orderValue !== "" ? orderValue : "NO INFO"}</p>
           <Button theme="edit" onClick={() => setIsEditing((prev) => !prev)}>
             edit

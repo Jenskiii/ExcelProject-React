@@ -1,0 +1,22 @@
+.header{
+  border-bottom: 1px solid #12121228;
+
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.container h2{
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.buttons{
+  display: flex;
+  gap: 1rem;
+}
+.container h2{
+  margin-right: auto;
+}

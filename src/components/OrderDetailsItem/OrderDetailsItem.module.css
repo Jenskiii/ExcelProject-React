@@ -3,6 +3,8 @@
   gap: 0.5rem;
   text-align: center;
   background-color: transparent;
+  padding: 1.5rem;
+  border-bottom: solid #cccccc 1px;
 }
 
 .card > h3 {
@@ -14,34 +16,30 @@
   position: relative;
   display: flex;
   align-items: center;
-  border: solid #cccccc 1px;
-  border-radius: 8px;
-  padding: 1.5rem;
-  min-width: 15rem;
 }
 
 .item p {
   margin-inline: auto;
+  opacity: .5;
 }
 
 .item button {
   position: absolute;
-  right: 1rem;
+  right: .25rem;
 }
 
 .item input{
-  color: white;
   background-color: transparent;
-  outline: solid 2px #cccccc;
-  border: 0; 
-  border-radius: 8px;
+  outline: 0;
+  border: 0;
+  border-bottom: solid 2px #cccccc; 
   padding: .25rem;
   text-align: center;
   width: 100%;
 }
 
-.item.empty {
-  border: solid rgba(255, 0, 0, 0.76) 1px;
+.card.empty{
+  border-bottom: solid rgba(255, 0, 0, 0.76) 1px;
   color: rgba(255, 0, 0, 0.76);
 }
 
@@ -59,8 +57,9 @@
 .item.active button{
   position: relative;
 }
-.item.active{
-  border-width: 3px;
+.card.active {
+  border-width: 2px;
+  border-color: rgb(2, 201, 35);
 }
 
 

@@ -1,11 +1,12 @@
 .btn {
-  display: inline-grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
   cursor: pointer;
   height: 3rem;
   width: 10rem;
   border: none;
-  border-radius: 8px;
   color: white;
   font-family: inherit;
   text-transform: uppercase;
@@ -13,21 +14,17 @@
   letter-spacing: 0.0625rem;
   transition: 250ms ease-in-out;
 }
-/* purple */
-.btn.purple {
-  background-color: purple;
-}
+
 /* red */
 .btn.red {
   background-color: hsl(0, 60%, 49%);
 }
 /* hover */
-.btn.red:is(:hover, :active),
-.btn.purple:is(:hover, :active) {
+.btn.red:is(:hover, :active) {
   opacity: 0.75;
 }
 
-
+/* UPDATE ORDER BUTTONS */
 /* edit */
 .btn.edit {
   color: rgb(0, 174, 255);
@@ -37,22 +34,65 @@
 .btn.edit:is(:hover, :active) {
   color: rgb(0, 255, 42);
 }
-
 /* cancel */
 .btn.cancel {
-  color: rgba(255, 0, 0, .8);
+  color: rgba(255, 0, 0, 0.8);
   background-color: transparent;
   width: auto;
 }
 .btn.cancel:is(:hover, :active) {
-  color: rgb(255, 0, 0)
+  color: rgb(255, 0, 0);
 }
 
-
-.btn.upload{
-  background-color: rgb(1, 120, 21);
+/* EXCEL upload / clear btns / add / details*/
+.btn.upload,
+.btn.clear {
+  font-weight: 700;
+  background: transparent;
+  padding-inline: 0.5rem;
+  width: auto;
+}
+.btn.upload svg,
+.btn.clear svg {
+  width: 16px;
+}
+.btn.upload {
+  color: rgb(1, 120, 21);
+  fill: rgb(1, 120, 21);
+}
+.btn.upload:is(:hover, :active) {
+  color: rgb(2, 201, 35);
+  border-bottom: 1px solid rgb(2, 201, 35);
+  margin-bottom: -1px;
 }
 
-.btn.upload:is(:hover, :active){
-  background-color: rgb(2, 201, 35);
+.btn.clear {
+  color: hsl(0, 60%, 49%);
+  fill: hsl(0, 60%, 49%);
+}
+.btn.clear:is(:hover, :active) {
+  color: hsl(0, 88%, 59%);
+  border-bottom: 1px solid hsl(0, 88%, 59%);
+  margin-bottom: -1px;
+}
+
+.btn.add {
+  background-color: blue;
+  fill: white;
+  border-radius: 8px;
+}
+.btn.add:is(:hover, :active) {
+  background-color: rgb(0, 92, 250);
+}
+.btn.add svg {
+  width: 1.5rem;
+}
+
+.btn.details {
+  background-color: rgb(158, 120, 173);
+  border-radius: 8px;
+}
+.btn.details:is(:hover, :active) {
+  background-color: rgb(135, 47, 170);
+  border-radius: 8px;
 }

@@ -6,14 +6,11 @@
   border-radius: .5rem;
   max-width: 25rem;
   padding-right: 1rem;
-  margin-block: 2.5rem;
-  background-color: #1f1b24;
+  background-color: white;
 }
 
 .searchbar > input {
   cursor: pointer;
-  color: white;
-  caret-color: #cccccc;
   padding: 0.75rem;
   border-radius: 3rem;
   outline: 0;

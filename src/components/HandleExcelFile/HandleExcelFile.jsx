@@ -1,20 +1,21 @@
 import useOrderData from "../../hooks/useOrderData";
 import { useExcelSheet } from "../../hooks/useExcelSheet";
 import { Button } from "../UI/Button/Button";
-import styles from "./ParseExcel.module.css";
+import styles from "./HandleExcelFile.module.css";
+import { DeleteIcon, DownloadIcon, UploadIcon } from "../UI/SVG/Svg";
 
-export function ParseExcel() {
+export function HandleExcelFile() {
   const { sheetData, setSheetData } = useOrderData();
   const { handleFileUpload, clearFileUpload, exportToExcel } =
     useExcelSheet(setSheetData);
 
   return (
-    <div className={styles.uploader}>
+    <>
       {/* if file uploaded, hide upload button */}
       {/* upload file */}
       <span className={sheetData.length !== 0 ? "hidden" : ""}>
         <label htmlFor="file-upload" className={styles["costum-file-upload"]}>
-          Upload File
+          <UploadIcon /> Upload File
         </label>
         <input
           type="file"
@@ -25,18 +26,20 @@ export function ParseExcel() {
       </span>
 
       {/* export excel file */}
-      <Button theme="upload" onClick={() => exportToExcel(sheetData, "Boxcooler References")}>
-        export
+      <Button
+        className={sheetData.length === 0 ? styles.hidden : ""}
+        theme="upload"
+        onClick={() => exportToExcel(sheetData, "Boxcooler References")}>
+        <DownloadIcon /> export file
       </Button>
 
       {/* clear uploaded file */}
       <Button
-        theme="red"
+        theme="clear"
         className={sheetData.length === 0 ? styles.hidden : ""}
-        onClick={() => clearFileUpload()}
-      >
-        Clear file
+        onClick={() => clearFileUpload()}>
+        <DeleteIcon /> Clear file
       </Button>
-    </div>
+    </>
   );
 }
