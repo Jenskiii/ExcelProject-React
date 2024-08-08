@@ -60,8 +60,8 @@
   width: 16px;
 }
 .btn.upload {
-  color: rgb(1, 120, 21);
-  fill: rgb(1, 120, 21);
+  color: rgb(2, 255, 44);
+  fill: rgb(2, 255, 44);
 }
 .btn.upload:is(:hover, :active) {
   color: rgb(2, 201, 35);
@@ -71,12 +71,12 @@
 }
 
 .btn.clear {
-  color: hsl(0, 60%, 49%);
-  fill: hsl(0, 60%, 49%);
+  color: hsl(0, 94%, 61%);
+  fill: hsl(0, 97%, 62%);
 }
 .btn.clear:is(:hover, :active) {
-  color: hsl(0, 88%, 59%);
-  border-bottom: 1px solid hsl(0, 88%, 59%);
+  color: hsl(0, 93%, 68%);
+  border-bottom: 1px solid hsl(0, 93%, 68%);
   margin-bottom: -1px;
 }
 
@@ -91,7 +91,7 @@
 .btn.add:is(:hover, :active) {
   color: #ffec00;
   background-color: #121212;
-  outline: 1px solid #ffec00;
+  outline: 2px solid #ffec00;
   fill: #ffec00;
 }
 .btn.add svg {
