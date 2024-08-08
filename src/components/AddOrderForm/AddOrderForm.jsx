@@ -34,15 +34,20 @@ const AddOrderForm = () => {
   });
 
   // form handeling
-  function handleSubmit() {
-    addSheetData(formData);
-    navigate("./home");
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (window.confirm("Weet je zeker dat je deze order wil toevoegen?")) {
+      addSheetData(formData);
+      navigate("./home");
+    } else {
+      return;
+    }
   }
 
   //filter selected indexes for .map
   const indexes = [0, 8, 9];
   return (
-    <form className={styles.form} onSubmit={() => handleSubmit()}>
+    <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
       <div className={styles["form-grid"]}>
         {sheetData.length > 0 &&
           // make an input for each element

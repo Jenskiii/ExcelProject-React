@@ -25,7 +25,11 @@ export function useExcelSheet(saveDataToVariable) {
 
   function clearFileUpload() {
     // clear uploaded file
-    localStorage.removeItem(LOCAL_STORAGE_KEY);
+    if (window.confirm("Weet je zeker dat je de file wil verwijderen?")) {
+      localStorage.removeItem(LOCAL_STORAGE_KEY);
+    } else {
+      return;
+    }
   }
 
   const exportToExcel = (data, fileName) => {
@@ -37,8 +41,14 @@ export function useExcelSheet(saveDataToVariable) {
       type: "array",
     });
 
-    const blob = new Blob([excelBuffer], { type: "application/octet-stream" });
-    saveAs(blob, `${fileName}.xlsx`);
+    if (window.confirm("Weet je zeker dat je de file wil opslaan?")) {
+      const blob = new Blob([excelBuffer], {
+        type: "application/octet-stream",
+      });
+      saveAs(blob, `${fileName}.xlsx`);
+    } else {
+      return;
+    }
   };
 
   return { handleFileUpload, clearFileUpload, exportToExcel };

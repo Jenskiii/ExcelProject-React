@@ -1,6 +1,6 @@
 .header{
-  border-bottom: 1px solid #12121228;
-
+  border-bottom: 3px solid #ffec00;
+  background-color: #121212;
 }
 
 .container{
@@ -11,6 +11,7 @@
 .container h2{
   font-size: 2rem;
   font-weight: 700;
+  color: #ffec00;
 }
 
 .buttons{

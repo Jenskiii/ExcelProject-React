@@ -4,10 +4,11 @@
   text-align: center;
   background-color: transparent;
   padding: 1.5rem;
-  border-bottom: solid #cccccc 1px;
+  border-bottom: solid #000000 3px;
 }
 
 .card > h3 {
+  margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -20,47 +21,43 @@
 
 .item p {
   margin-inline: auto;
-  opacity: .5;
+  opacity: 0.75;
 }
 
 .item button {
   position: absolute;
-  right: .25rem;
+  right: 0.25rem;
 }
 
-.item input{
+.item input {
   background-color: transparent;
   outline: 0;
   border: 0;
-  border-bottom: solid 2px #cccccc; 
-  padding: .25rem;
+  border-bottom: solid 2px #121212;
+  border-style: dotted;
+  padding: 0.25rem;
   text-align: center;
   width: 100%;
 }
 
-.card.empty{
-  border-bottom: solid rgba(255, 0, 0, 0.76) 1px;
-  color: rgba(255, 0, 0, 0.76);
+.card.empty {
+  border-bottom: solid #ec0000 3px;
+  color: #ec0000;
 }
 
-
 /* EDIT */
-.edit{
+.edit {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
 
-.item.active{
- flex-direction: column;
+.item.active {
+  flex-direction: column;
 }
-.item.active button{
+.item.active button {
   position: relative;
 }
 .card.active {
   color: #121212;
-  border-width: 2px;
-  border-color: rgb(2, 201, 35);
 }
-
-

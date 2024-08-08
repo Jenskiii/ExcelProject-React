@@ -17,31 +17,34 @@
 
 /* submit */
 .btn.submit {
-  background-color: rgb(4, 178, 33);
+  color: #ffec00;
+  background-color: #121212;
+  border-radius: 8px;
 }
 /* hover */
 .btn.submit:is(:hover, :active) {
-  background-color: rgb(6, 220, 42)
+  color: #121212;
+  background-color: #ffec00;
 }
 
 /* UPDATE ORDER BUTTONS */
 /* edit */
 .btn.edit {
-  color: rgb(0, 174, 255);
+  color: rgb(0, 191, 255);
   background-color: transparent;
   width: auto;
 }
 .btn.edit:is(:hover, :active) {
-  color: rgb(0, 255, 42);
+  color: #3eca02;
 }
 /* cancel */
 .btn.cancel {
-  color: rgba(255, 0, 0, 0.8);
+  color: #ec0000;
   background-color: transparent;
   width: auto;
 }
 .btn.cancel:is(:hover, :active) {
-  color: rgb(255, 0, 0);
+  color: #f75e5e;
 }
 
 /* EXCEL upload / clear btns / add / details*/
@@ -78,24 +81,29 @@
 }
 
 .btn.add {
-  background-color: blue;
-  fill: white;
+  color: #121212;
+  background-color: #ffec00;
+  fill: #121212;
   border-radius: 8px;
   width: auto;
-  padding-inline: .75rem;
+  padding-inline: 0.75rem;
 }
 .btn.add:is(:hover, :active) {
-  background-color: rgb(0, 92, 250);
+  color: #ffec00;
+  background-color: #121212;
+  outline: 1px solid #ffec00;
+  fill: #ffec00;
 }
 .btn.add svg {
   width: 1.5rem;
 }
 
 .btn.details {
-  background-color: rgb(158, 120, 173);
+  color: #ffec00;
+  background-color: #121212;
   border-radius: 8px;
 }
 .btn.details:is(:hover, :active) {
-  background-color: rgb(135, 47, 170);
-  border-radius: 8px;
+  color: #121212;
+  background-color: #ffec00;
 }

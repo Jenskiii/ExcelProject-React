@@ -12,6 +12,9 @@
     "DRAW3 DRAW8 . ."
     "DRAW4 DRAW9 . ."
     "DRAW5 DRAW10. .";
+  background-color: rgba(208, 207, 207, 0.4);
+  border-radius: 0.5rem;
+  padding: 2rem;
 }
 .card_0 {
   grid-area: YEAR;

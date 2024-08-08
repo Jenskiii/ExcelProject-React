@@ -10,7 +10,7 @@ export function Home() {
   const { sheetData } = useOrderData();
   return (
     <>
-      <h1>Orders</h1>
+      <h1 className={styles.title}>Orders</h1>
       <div className={`${styles["search-bar"]} | container`}>
         {/* search bar */}
         <SearchBar />
