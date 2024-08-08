@@ -36,9 +36,35 @@ const AddOrderForm = () => {
   // form handeling
   function handleSubmit(e) {
     e.preventDefault();
-    if (window.confirm("Weet je zeker dat je deze order wil toevoegen?")) {
+
+    // VALIDATION
+    // if Order number already excist show confirm message
+    if (
+      sheetData.find((item) => item.Order_no === formData.Order_no) &&
+      sheetData.find((item) => item.Order_no === formData.Order_no).Order_no !==
+        ""
+    ) {
+      // if confirm add data
+      if (
+        window.confirm(
+          "ORDERNUMMER BESTAAT AL!,\n als je op 'OK' klikt wordt de order GEMAAKT!"
+        )
+      ) {
+        // add data + return to home page
+        addSheetData(formData);
+        navigate("/home");
+        // else return to top of page
+      } else {
+        return window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } else if (
+      window.confirm("Weet je zeker dat je deze order wil toevoegen?")
+    ) {
+      // add data + return to home page
       addSheetData(formData);
-      navigate("./home");
+      navigate("/home");
+
+      // if no permission abort function
     } else {
       return;
     }
